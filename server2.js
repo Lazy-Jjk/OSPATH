@@ -1,0 +1,15 @@
+const http = require('http');  
+const os = require('os');      
+const path = require('path');   
+const EventEmitter = require('events');  
+const eventEmitter = new EventEmitter(); 
+const port = 3000;  
+const hostname = '127.0.0.1'; 
+const filePath = '/users/sathish/documents/sample.txt';
+console.log('OS Type:', os.type());  
+console.log('OS Platform:', os.platform());  
+console.log('OS Architecture:', os.arch()); 
+console.log('CPU Cores:', os.cpus().length);
+console.log('Current Working Directory:', process.cwd()); 
+console.log(`Absolute Path: ${path.resolve(filePath)}`); 
+console.log(`Server running at http://${hostname}:${port}/`);
